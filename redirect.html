@@ -23,7 +23,7 @@ permalink: 404.html
             window.location.href = "https://github.com/Galster-dev/Linkdustry";
         } else {
             var destination = document.documentElement.getAttribute('data-destination');
-            window.location.href = destination + (window.location.pathname || '') + (window.location.search || '') + (window.location.hash || '');
+            window.location.href = destination + (window.location.pathname || '').replace(/^\/+/g, '') + (window.location.search || '') + (window.location.hash || '');
         }
     </script>
 </body>
