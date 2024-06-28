@@ -19,11 +19,11 @@ permalink: 404.html
         <div></div>
     </div>
     <script>
-        if((window.location.search || '').length < 2 || window.location.search.startsWith('404')) {
+        if((window.location.pathname || '').length < 2 || window.location.pathname.startsWith('404')) {
             window.location.href = "https://github.com/Galster-dev/Linkdustry";
         } else {
             var destination = document.documentElement.getAttribute('data-destination');
-            window.location.href = destination + (window.location.search || '') + (window.location.hash || '');
+            window.location.href = destination + (window.location.pathname || '') + (window.location.search || '') + (window.location.hash || '');
         }
     </script>
 </body>
